@@ -26,13 +26,40 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    accounts.cpp
+    accounts.cpp \
+    externals/qmastodon/mastodon.cpp \
+    externals/qmastodon/mastodonaccount.cpp \
+    externals/qmastodon/mastodonapplication.cpp \
+    externals/qmastodon/mastodonattachment.cpp \
+    externals/qmastodon/mastodonmention.cpp \
+    externals/qmastodon/mastodonstatus.cpp \
+    externals/qmastodon/mastodontag.cpp \
+    accounts.cpp \
+    main.cpp \
+    mainwindow.cpp
 
 HEADERS += \
         mainwindow.h \
-    accounts.h
+    accounts.h \
+    externals/qmastodon/libmastodon_global.h \
+    externals/qmastodon/mastodon.h \
+    externals/qmastodon/mastodonaccount.h \
+    externals/qmastodon/mastodonapplication.h \
+    externals/qmastodon/mastodonattachment.h \
+    externals/qmastodon/mastodonmention.h \
+    externals/qmastodon/mastodonstatus.h \
+    externals/qmastodon/mastodontag.h \
+    externals/qmastodon/qmastodon_global.h \
+    accounts.h \
+    mainwindow.h
 
 FORMS += \
         mainwindow.ui \
     about.ui \
     accounts.ui
+
+SUBDIRS += \
+    externals/qmastodon/libmastodon.pro \
+    externals/qmastodon/qmastodon.pro
+
+DISTFILES +=
